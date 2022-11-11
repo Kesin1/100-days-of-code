@@ -7,7 +7,8 @@
 
 ** Infos
 
-[[https://github.com/talkpython/100daysofcode-with-python-course][Course_repo]]
+[[https://github.com/talkpython/100daysofcode-with-python-course][Course_repo 100daysofcode-with-python-course]]
+[[https://codechalleng.es/100days/8260][Pybytes Challenge 100daysOfCode]]
 
 * Chapter 1 Intro
 
