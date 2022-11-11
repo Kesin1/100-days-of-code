@@ -5,6 +5,10 @@
 2. Take Notes, Try to organize (maybe use Org-Roam at the end)
 3. Create Kata Repo for reoccuring tasks in python
 
+** Infos
+
+[[https://github.com/talkpython/100daysofcode-with-python-course][Course_repo]]
+
 * Chapter 1
 
 
