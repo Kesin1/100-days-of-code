@@ -9,7 +9,53 @@
 
 [[https://github.com/talkpython/100daysofcode-with-python-course][Course_repo]]
 
-* Chapter 1
+* Chapter 1 Intro
 
+* Chapter 2
 
+** Day 1 Datetime Introduction
+
+#+begin_src python
+  from datetime import datetime
+  from datetime import date
+  from datetime import timedelta
+  today = datetime.today()
+  type(today)
+
+  today_date = date.today()
+  type(today_date)
+
+  today_date.month
+  today_date.day
+  today_date.__dir__()
+  christmas = date(2022, 12, 25)
+
+  date_delta = christmas-today_date
+  type(christmas-today_date)
+
+  t = timedelta(days=4, hours=10)
+  type(t)
+  t.days
+
+  eta = timedelta(hours=6)
+  today+eta
+
+  str(today+eta)
+  eta + t
+#+end_src
+
+- /datetime/ is Python Library
+- today is datetime object
+- today is datetime.date object
+  Methods:
+  - .month()
+  Attributes
+  - .month
+- date_delta is datetime.timedelta object
+  - you can do arithmetic with it (timedelate and datetimes, timedelta and dates, timedelate with
+    itself)
+    
+** Day 2 PyBytes Challenges 
+
+** Day 3
 
