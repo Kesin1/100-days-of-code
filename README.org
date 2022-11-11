@@ -1,3 +1,8 @@
 * 100 days of code with Python
 
-*Goal*: Do 1h every two days
+*Goal*:
+1. Do 1h every two days
+2. Take Notes, Try to organize (maybe use Org-Roam at the end)
+3. Create Kata Repo for reoccuring tasks in python
+
+
