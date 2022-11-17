@@ -12,8 +12,7 @@
 
 * Chapter 1 Intro
 
-* Chapter 2
-
+* Chapter 2 Playing with Datetimes
 ** Day 1 Datetime Introduction
 
 #+begin_src python
@@ -56,7 +55,86 @@
   - you can do arithmetic with it (timedelate and datetimes, timedelta and dates, timedelate with
     itself)
     
-** Day 2 PyBytes Challenges 
+** Day 2 PyBytes Challenges
+Got everything going with Pybites etc.. Subscribed for the challenge
+** Day 3 Gendates
+Solved [[https://codechalleng.es/bites/16/][Pybites date generator]]. Also setup a repo so I can
+practice tests etc.
+* Chapter 3 Collections Module
+** Day 4
+*** DataTypes in Collections
+- namedtuple
+  #+begin_src python
+    user = ('bob', 'coder')
+    f'{user[0]} is a {user[1]}'
+  #+end_src
+  vs.
+  #+begin_src python
+    from collections import namedtuple
+    User = namedtuple('User', 'name role')
+    user = User(name='bob', role='coder')
+    user.name
+    user.role
+  #+end_src
+- defaultdict
+  #+begin_src python
+    users = {'bob': 'coder'}
+    users['bob']
+    users['julian']                 # provokes KeyError
+    users.get('bob')
+    users.get('julian')             # returns None
+  #+end_src
 
-** Day 3
+  But what if we need to build up a collection
 
+  #+begin_src python
+    challenges_done = [
+        ('Mike', 10), ('Julian', 7), ('Bob', 5),
+        ('Mike', 11), ('Julian', 8), ('Bob', 6)
+    ]
+    challenges = {}
+    for name, challenge in challenges_done:
+        challenges[name].append(challenge)  # provokes keyError
+  #+end_src
+
+  Use defaultdict
+
+  #+begin_src python
+    challenges_done = [
+        ('Mike', 10), ('Julian', 7), ('Bob', 5),
+        ('Mike', 11), ('Julian', 8), ('Bob', 6)
+    ]
+    challenges = defaultdict(list)
+    for name, challenge in challenges_done:
+        challenges[name].append(challenge)
+  #+end_src
+- counter
+  E.g. Count most common words
+  Usual approach: Build dictionary that holds the count of words
+  #+begin_src python
+    Counter(words).most_common(5)
+  #+end_src
+- deque
+  deques are generalization of stacks and queues (deck)
+  If you need to add and remove at both ends -> consider a deque
+  Example
+  #+begin_src python
+    import random
+    from collections import deque
+    lst = list(range(10_000_000))
+    deq = deque(range(10_000_000))
+
+    # test function
+    def insert_and_delete(ds):
+        for _ in range(10):
+            index = random.choice(range(100))
+            ds.remove(index)
+            ds.insert(index, index)
+
+    # time the list
+    import timeit
+    timeit.timeit(lambda: insert_and_delete(lst), number=100)/100
+    timeit.timeit(lambda: insert_and_delete(deq), number=100)/100
+  #+end_src
+- ChainMap
+- OrderedDict
