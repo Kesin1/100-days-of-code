@@ -1,0 +1,13 @@
+* Pytest coverage
+
+need to install [[https://pypi.org/project/pytest-cov/][pytest-cov]]
+run pytest with coverage
+pytest --cov=src tests/
+add -s to pytest (pytest -s) to capture output
+capfd -- feature in python capture stdout of program and execution
+- capfd.readouteer()
+
+
+  
+* 
+

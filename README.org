@@ -98,7 +98,7 @@ practice tests etc.
   #+end_src
 
   Use defaultdict
-
+  
   #+begin_src python
     challenges_done = [
         ('Mike', 10), ('Julian', 7), ('Bob', 5),
@@ -138,3 +138,41 @@ practice tests etc.
   #+end_src
 - ChainMap
 - OrderedDict
+* Chapter 4 Data Structures (List, Tuples, Dicts)
+** Lists
+- things to know
+  - num_list is a list of integer
+  - *Reversing*: num_list.reverse() (inplace)
+  - *Sorting*: num_list.sort()
+  - list(a_string) gives list of characters
+  - .pop() returns last letter from the list
+  - .insert(index, object)
+  - .append ... add to the end
+
+*** Mutability and Immutability
+
+- *mutability*: object that can be changed (e.g. lists)
+- *immutability*: object unchangeable (e.g. tuples)
+  - still readable, iterable, not changeable
+
+** Dictioanries
+
+- consisting of keys and values
+- no order
+- .keys(), .values(), .items()
+
+* Testing with Pytest
+
+[[https://docs.python-guide.org/writing/tests/][Hitchhiker Guide to Python - Testing your Code]]
+
+important points:
+- make sure that previous code keeps running while adding new code
+- every test should test one thing and should be small and independent
+- need to be fast: will grow and ran often
+- should be automated
+- fixing bugs -> write bug first
+
+** Frameworks
+
+Unittest, Hypothesis, tox, mock
+
